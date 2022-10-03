@@ -42,10 +42,13 @@
                         <td>
                             <%= dataUser[i].lastName %>
                         </td>
-                        <td>
-                            <a href="detai/user/<%= dataUser[i].id %>">Detail</a>
-                            <a>Edit</a>
-                            <a>Delete</a>
+                        <td class="button-action">
+                            <a href="detail/user/<%= dataUser[i].id %>" target="_blank">Detail</a>
+                            <button type="button">Edit</button>
+                            <form action="/delete-user" method="POST">
+                                <input type="hidden" value="<%= dataUser[i].id %>" name="Iduser" >
+                                <button type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <% } %>
@@ -60,10 +63,10 @@
                 <label for="fname">First name:</label><br>
                 <input type="text" name="fname"><br>
                 <label for="lname">Last name:</label><br>
-                <input type="text" name="lname"lname><br>
-                <label for="fname">Email:</label><br>
+                <input type="text" name="lname"><br>
+                <label for="email">Email:</label><br>
                 <input type="email" name="email"><br>
-                <label for="fname">Address:</label><br>
+                <label for="address">Address:</label><br>
                 <input type="text" name="address"><br><br>
                 <button type="submit">CREATE</button>
             </form>

@@ -5,13 +5,11 @@ let router=express.Router();
 
 const initWebRoute = (app )=>{
     router.get('/',homeController.getHomePage);
-    router.get('/profile',(req,res)=>{
-        res.send('Hi Quang')
-    });
     router.get('/detail/user/:userId',homeController.getDetailPage);
     router.post('/create/user',homeController.getCreateUserPage);
+    router.post('/delete-user',homeController.getDeletePage);
 
-      return app.use('/',router);
+    return app.use('/',router);
 }
 
 export default initWebRoute;

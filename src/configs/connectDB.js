@@ -7,4 +7,5 @@ const connection = mysql.createPool({
   database: 'nodejsbasic'
 });
 
+
 export default connection;
