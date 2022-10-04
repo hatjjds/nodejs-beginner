@@ -22,7 +22,8 @@ let getCreateUserPage = async (req, res) => {
 }
 
 let getDeletePage = async (req, res) => {
-    let iduser=req.params.Iduser;
+    let iduser=req.body.Iduser;
+    // console.log(iduser);
     await connection.execute('delete from user where id = ?', [iduser]);
     return res.redirect('/');
 }
