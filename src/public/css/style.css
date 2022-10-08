@@ -35,3 +35,24 @@ dt .button-action{
   display: flex;
 }
 
+.update-user-container {
+  padding   : 15px;
+  text-align: center;
+}
+
+.update-user-container label {
+  display: block;
+}
+
+.btn-save {
+  margin-top: 15px;
+  cursor    : pointer;
+}
+
+.container button{
+  padding: 15px;
+}
+
+.container label{
+  display: block;
+}

@@ -14,10 +14,8 @@
     <!-- <%= dataUser %> -->
 
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a class="active" href="/">Home</a>
+        <a href="/upload">Upload</a>
     </div>
 
     <div>
@@ -44,7 +42,9 @@
                         </td>
                         <td class="button-action">
                             <a href="detail/user/<%= dataUser[i].id %>" target="_blank">Detail</a>
-                            <button type="button">Edit</button>
+                            <form action="/edit-user/<%= dataUser[i].id %>" method="GET ">
+                                <button type="submit">Edit</button>
+                            </form>
                             <form action="/delete-user" method="POST">
                                 <input type="hidden" value="<%= dataUser[i].id %>" name="Iduser" >
                                 <button type="submit">Delete</button>
